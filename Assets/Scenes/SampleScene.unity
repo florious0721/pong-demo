@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 196713260}
   m_Layer: 0
   m_Name: BarrierL
-  m_TagString: Barrier
+  m_TagString: BlackHole
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -401,8 +401,8 @@ GameObject:
   - component: {fileID: 723674860}
   - component: {fileID: 723674859}
   - component: {fileID: 723674861}
-  - component: {fileID: 723674863}
   - component: {fileID: 723674862}
+  - component: {fileID: 723674863}
   m_Layer: 0
   m_Name: PaddleR
   m_TagString: Paddle
@@ -862,6 +862,7 @@ GameObject:
   - component: {fileID: 1533416644}
   - component: {fileID: 1533416646}
   - component: {fileID: 1533416647}
+  - component: {fileID: 1533416648}
   m_Layer: 0
   m_Name: PaddleL
   m_TagString: Paddle
@@ -995,6 +996,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b9afcc5e5fd0e4745a3dc7d6738e8516, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1533416648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533416643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 683d1d89e24c61b4087d545d9270810d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1582206897
@@ -1144,7 +1157,7 @@ GameObject:
   - component: {fileID: 1846397112}
   m_Layer: 0
   m_Name: BarrierR
-  m_TagString: Barrier
+  m_TagString: BlackHole
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

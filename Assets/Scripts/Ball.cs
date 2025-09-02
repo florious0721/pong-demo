@@ -2,12 +2,21 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
+    const float MAX_MAGNITUDE = 40f;
+    const float MIN_MAGNITUDE = 10f;
     [SerializeField]
     private Rigidbody2D phys;
 
+    void Reset() {
+        phys.position = new Vector2(0f, 0f);
+        float x = Random.value;
+        float y = Mathf.Sqrt(1 - x*x);
+        phys.linearVelocity = new Vector2(x, y) * MIN_MAGNITUDE;
+    }
+
     void Start() {
         phys = GetComponent<Rigidbody2D>();
-        phys.linearVelocity = new Vector2(12f, 12f);
+        Reset();
     }
 
     void Update() {}
@@ -30,7 +39,14 @@ public class Ball : MonoBehaviour
             } else {
                 velocityScale = 1.2f;
             }
-            phys.linearVelocity = velocityNorm * (phys.linearVelocity.magnitude * velocityScale);
+
+            float newMagnitude = phys.linearVelocity.magnitude * velocityScale;
+            if (newMagnitude > MAX_MAGNITUDE) newMagnitude = MAX_MAGNITUDE;
+            else if (newMagnitude < MIN_MAGNITUDE) newMagnitude = MIN_MAGNITUDE;
+
+            phys.linearVelocity = velocityNorm * newMagnitude;
+        } else if (c.gameObject.CompareTag("BlackHole")) {
+            Reset();
         }
     }
 }
