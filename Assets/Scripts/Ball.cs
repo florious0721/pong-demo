@@ -9,7 +9,7 @@ public class Ball : MonoBehaviour
 
     void Reset() {
         phys.position = new Vector2(0f, 0f);
-        float x = Random.value;
+        float x = Random.Range(0.2f, 0.6f);
         float y = Mathf.Sqrt(1 - x*x);
         phys.linearVelocity = new Vector2(x, y) * MIN_MAGNITUDE;
     }

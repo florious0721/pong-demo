@@ -264,7 +264,7 @@ GameObject:
   - component: {fileID: 290122870}
   - component: {fileID: 290122869}
   m_Layer: 0
-  m_Name: RBGen
+  m_Name: RBController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
