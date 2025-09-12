@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 196713262}
   - component: {fileID: 196713261}
   - component: {fileID: 196713260}
+  - component: {fileID: 196713263}
   m_Layer: 0
   m_Name: BarrierL
   m_TagString: BlackHole
@@ -167,7 +168,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -253,6 +254,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &196713263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196713258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5efad4219cb5a6c418d1509f4cadfcdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &290122868
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,7 +295,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4586d97d329871e42b7c5a9a0ac7b26a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxCounter: 0
 --- !u!4 &290122870
 Transform:
   m_ObjectHideFlags: 0
@@ -447,7 +459,7 @@ GameObject:
   - component: {fileID: 723674859}
   - component: {fileID: 723674861}
   - component: {fileID: 723674862}
-  - component: {fileID: 723674863}
+  - component: {fileID: 723674864}
   m_Layer: 0
   m_Name: PaddleR
   m_TagString: Paddle
@@ -555,7 +567,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -583,7 +595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9afcc5e5fd0e4745a3dc7d6738e8516, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &723674863
+--- !u!114 &723674864
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -592,7 +604,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 723674858}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89e5dd757aca9784498fc599133361f3, type: 3}
+  m_Script: {fileID: 11500000, guid: d54a60aa1ffaf90459afe2642c860b73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &934936247
@@ -663,7 +675,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5fceea7099d3b84bb64ffdadf55b03e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phys: {fileID: 0}
 --- !u!212 &934936250
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -907,7 +918,7 @@ GameObject:
   - component: {fileID: 1533416644}
   - component: {fileID: 1533416646}
   - component: {fileID: 1533416647}
-  - component: {fileID: 1533416648}
+  - component: {fileID: 1533416649}
   m_Layer: 0
   m_Name: PaddleL
   m_TagString: Paddle
@@ -1015,7 +1026,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -1043,7 +1054,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9afcc5e5fd0e4745a3dc7d6738e8516, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1533416648
+--- !u!114 &1533416649
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1052,7 +1063,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1533416643}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 683d1d89e24c61b4087d545d9270810d, type: 3}
+  m_Script: {fileID: 11500000, guid: d54a60aa1ffaf90459afe2642c860b73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1582206897
@@ -1200,6 +1211,7 @@ GameObject:
   - component: {fileID: 1846397114}
   - component: {fileID: 1846397113}
   - component: {fileID: 1846397112}
+  - component: {fileID: 1846397115}
   m_Layer: 0
   m_Name: BarrierR
   m_TagString: BlackHole
@@ -1237,7 +1249,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -1323,6 +1335,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1846397115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846397110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5efad4219cb5a6c418d1509f4cadfcdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
