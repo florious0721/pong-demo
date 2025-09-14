@@ -1,7 +1,6 @@
 using UnityEngine;
 
-public class Paddle : MonoBehaviour
-{
+public class Paddle: MonoBehaviour {
     bool isOnRightSide;
 
     void Start() {
@@ -17,6 +16,8 @@ public class Paddle : MonoBehaviour
         if (!ballObj.CompareTag("Ball")) return;
         var ballScript = ballObj.GetComponent<Ball>();
 
+        ballScript.TriggerPrePaddleCollision(ballScript, this);
+
         float hitOffset = (ballTrans.position.y - this.transform.position.y) / Const.PADDLE_SCALE.y;
         float hitOffsetAbs = Mathf.Abs(hitOffset);
         hitOffset = hitOffsetAbs > .4f ? Mathf.Sign(hitOffset) * .4f : hitOffset;
@@ -25,18 +26,17 @@ public class Paddle : MonoBehaviour
         Vector2 velocityNorm = new Vector2(Mathf.Cos(hitOffset * Mathf.PI) * xSign, Mathf.Sin(hitOffset * Mathf.PI));
 
         float velocityScale;
-        if (hitOffsetAbs > .1f) {
-            velocityScale = .8f;
+        if (hitOffsetAbs < .1f) {
+            velocityScale = .9f;
         } else if (hitOffsetAbs < .3f) {
             velocityScale = 1f;
         } else {
-            velocityScale = 1.2f;
+            velocityScale = 1.1f;
         }
 
         float newMagnitude = ballScript.LinearVelocity.magnitude * velocityScale;
-        if (newMagnitude > Ball.MAX_MAGNITUDE) newMagnitude = Ball.MAX_MAGNITUDE;
-        else if (newMagnitude < Ball.MIN_MAGNITUDE) newMagnitude = Ball.MIN_MAGNITUDE;
-
         ballScript.LinearVelocity = velocityNorm * newMagnitude;
+
+        ballScript.TriggerAfterPaddleCollision(ballScript, this);
     }
 }

@@ -1,7 +1,6 @@
 using UnityEngine;
 
-public class BlackHole : MonoBehaviour
-{
+public class BlackHole: MonoBehaviour {
     void Start() {}
 
     void Update() {}

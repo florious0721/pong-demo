@@ -8,6 +8,7 @@ TagManager:
   - Ball
   - Barrier
   - BlackHole
+  - Box
   layers:
   - Default
   - TransparentFX
